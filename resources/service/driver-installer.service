@@ -2,18 +2,18 @@
 Description=Deepin Graphics Driver Manager - Installer
 After=systemd-user-sessions.service getty@tty1.service plymouth-quit.service
 Before=lightdm.service
-ConditionPathExists=/usr/lib/deepin-graphics-driver-manager/working-dir/test_in_overlay_flag
+ConditionPathExists=/usr/lib/gxde-graphics-driver-manager/working-dir/test_in_overlay_flag
 
 [Service]
 Type=oneshot
 Environment=LC_ALL=C
 ExecStartPre=-/usr/sbin/overlayroot-disable
-ExecStartPre=-/usr/sbin/overlayroot-chroot rm -f /usr/lib/deepin-graphics-driver-manager/working-dir/test_in_overlay_flag
+ExecStartPre=-/usr/sbin/overlayroot-chroot rm -f /usr/lib/gxde-graphics-driver-manager/working-dir/test_in_overlay_flag
 ExecStartPre=-/usr/bin/xset s 0 0
 ExecStartPre=-/usr/bin/xset s off
 ExecStartPre=-/bin/dmesg --console-off
 ExecStartPre=-/bin/plymouth quit
-ExecStart=/usr/lib/deepin-graphics-driver-manager/dgradvrmgr.sh
+ExecStart=/usr/lib/gxde-graphics-driver-manager/dgradvrmgr.sh
 StandardInput=tty-force
 StandardOutput=journal
 StandardError=journal

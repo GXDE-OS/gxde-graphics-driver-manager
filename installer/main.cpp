@@ -3,6 +3,11 @@
 #include <DLog>
 #include <ddialog.h>
 
+#include <QDir>
+#include <QTextCodec>
+#include <QTranslator>
+#include <QTimer>
+#include <QProcess>
 #include <QSettings>
 #include <QDebug>
 #include <QDBusConnectionInterface>
@@ -10,7 +15,7 @@
 DWIDGET_USE_NAMESPACE
 DCORE_USE_NAMESPACE
 
-#define CONFIG "/usr/lib/deepin-graphics-driver-manager/working-dir/config.conf"
+#define CONFIG "/usr/lib/gxde-graphics-driver-manager/working-dir/config.conf"
 #define DESKTOP_FILE "/.config/autostart/deepin-gradvrmgr-installer.desktop"
 #define AuthAgentDbusService "com.deepin.Polkit1AuthAgent"
 
@@ -36,7 +41,7 @@ void show_success_dialog()
     const QString &new_driver = SETTINGS->value("new_driver").toString();
     const QString &message = qApp->translate("main", "Congratulations, you have switched to %1, please reboot to take effect.");
 
-    DDialog *d = dialog(message.arg(new_driver), "://resources/icons/deepin-graphics-driver-manager-success.svg");
+    DDialog *d = dialog(message.arg(new_driver), "://resources/icons/gxde-graphics-driver-manager-success.svg");
     d->addButton(qApp->translate("main", "Cancel"));
     d->addButton(qApp->translate("main", "Reboot"));
     d->setDefaultButton(1);
@@ -66,7 +71,7 @@ void show_fail_dialog()
 }
 
 int show_install_dialog() {
-    DDialog *installDialog = dialog(qApp->translate("main", "Updating the driver, please wait..."), "://resources/icons/deepin-graphics-driver-manager-installing.svg");
+    DDialog *installDialog = dialog(qApp->translate("main", "Updating the driver, please wait..."), "://resources/icons/gxde-graphics-driver-manager-installing.svg");
 
     QProcess *removeProc = new QProcess;
     removeProc->connect(removeProc, static_cast<void (QProcess::*)(int)>(&QProcess::finished), removeProc, &QProcess::deleteLater);
@@ -80,11 +85,11 @@ int show_install_dialog() {
         QProcess *installProc = new QProcess;
         installProc->connect(installProc, static_cast<void (QProcess::*)(int)>(&QProcess::finished), installProc, &QProcess::deleteLater);
         installProc->connect(installProc, static_cast<void (QProcess::*)(int)>(&QProcess::finished), installDialog, &DDialog::done);
-        QStringList installArgs {"/bin/bash", "-x", "/usr/lib/deepin-graphics-driver-manager/working-dir/install_new.sh"};
+        QStringList installArgs {"/bin/bash", "-x", "/usr/lib/gxde-graphics-driver-manager/working-dir/install_new.sh"};
         qDebug() << "start install process";
         installProc->start("pkexec", installArgs);
     });
-    QStringList removeArgs {"/bin/bash", "-x", "/usr/lib/deepin-graphics-driver-manager/working-dir/remove_old.sh"};
+    QStringList removeArgs {"/bin/bash", "-x", "/usr/lib/gxde-graphics-driver-manager/working-dir/remove_old.sh"};
 
     //if (DbusConnInter->isServiceRegistered(AuthAgentDbusService)) {
     //    qDebug() << "start remove process";
@@ -162,10 +167,10 @@ int main(int argc, char *args[])
     DApplication dapp(argc, args);
     dapp.setQuitOnLastWindowClosed(true);
     dapp.setOrganizationName("deepin");
-    dapp.setApplicationName("deepin-graphics-driver-manager-installer");
+    dapp.setApplicationName("gxde-graphics-driver-manager-installer");
 
     QTranslator translator;
-    translator.load(QString("/usr/share/deepin-graphics-driver-manager/translations/deepin-graphics-driver-manager_%1.qm").arg(QLocale::system().name()));
+    translator.load(QString("/usr/share/gxde-graphics-driver-manager/translations/gxde-graphics-driver-manager_%1.qm").arg(QLocale::system().name()));
     dapp.installTranslator(&translator);
 
     DLogManager::registerConsoleAppender();

@@ -13,6 +13,6 @@ target_link_libraries(installer
     ${Qt5DBus_LIBRARIES}
 )
 
-install(TARGETS installer DESTINATION lib/deepin-graphics-driver-manager)
+install(TARGETS installer DESTINATION lib/gxde-graphics-driver-manager)
 install(FILES deepin-gradvrmgr-installer.desktop
-        DESTINATION lib/deepin-graphics-driver-manager)
+        DESTINATION lib/gxde-graphics-driver-manager)

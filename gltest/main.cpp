@@ -168,7 +168,7 @@ protected:
 private slots:
     void onAccept()
     {
-        QProcess::execute("/usr/lib/deepin-graphics-driver-manager/gltest-set-success.sh");
+        QProcess::execute("/usr/lib/gxde-graphics-driver-manager/gltest-set-success.sh");
         qApp->exit(0);
     }
 
@@ -190,12 +190,12 @@ int main(int argc, char *argv[])
     glutInit(&argc, argv);
     QApplication app(argc, argv);
 
-    QSettings settings("/usr/lib/deepin-graphics-driver-manager/working-dir/config.conf", QSettings::IniFormat);
+    QSettings settings("/usr/lib/gxde-graphics-driver-manager/working-dir/config.conf", QSettings::IniFormat);
     const bool exit_gltest = settings.value("exit_test", false).toBool();
     const QString lang = settings.value("lang", "en_US").toString();
 
     QTranslator translator;
-    translator.load(QString("/usr/share/deepin-graphics-driver-manager/translations/deepin-graphics-driver-manager_%1.qm").arg(lang));
+    translator.load(QString("/usr/share/gxde-graphics-driver-manager/translations/gxde-graphics-driver-manager_%1.qm").arg(lang));
     app.installTranslator(&translator);
 
     GLTestWindow *w = new GLTestWindow;

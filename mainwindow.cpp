@@ -15,7 +15,7 @@
 #include <DSvgRenderer>
 #include <DThemeManager>
 
-#define INSTALLER_DESKTOP_FILE_SOURCE "/usr/lib/deepin-graphics-driver-manager/deepin-gradvrmgr-installer.desktop"
+#define INSTALLER_DESKTOP_FILE_SOURCE "/usr/lib/gxde-graphics-driver-manager/deepin-gradvrmgr-installer.desktop"
 #define INSTALLER_DESKTOP_FILE_DEST "/.config/autostart/deepin-gradvrmgr-installer.desktop"
 
 #define THEME_DARK "dark"
@@ -104,7 +104,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     DTitlebar *tbar = titlebar();
     tbar->setTitle(QString());
-    tbar->setIcon(QIcon(":/resources/icons/deepin-graphics-driver-manager-64px.svg"));
+    tbar->setIcon(QIcon(":/resources/icons/gxde-graphics-driver-manager-64px.svg"));
     tbar->setBackgroundTransparent(true);
     tbar->setMenu(m_tbMenu);
     m_tbMenu->addAction(m_darkThemeAction);

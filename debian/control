@@ -1,12 +1,24 @@
-Source: deepin-graphics-driver-manager
+Source: gxde-graphics-driver-manager
 Section: misc
 Priority: optional
-Maintainer: Deepin Packages Builder <packages@deepin.com>
-Build-Depends: debhelper (>= 9), cmake, pkg-config, libqt5widgets5, libdtkwidget-dev, libpci-dev, libgl1-mesa-dev, freeglut3-dev, libxmu-dev, libxi-dev, qt5-default, qttools5-dev-tools
+Maintainer: gfdgd xi <3025613752@qq.com>
+Build-Depends: 
+ debhelper (>= 9), 
+ cmake,
+ pkg-config, 
+ libqt5widgets5, 
+ libdtkwidget2-dev, 
+ libpci-dev, 
+ libgl1-mesa-dev, 
+ freeglut3-dev, 
+ libxmu-dev, 
+ libxi-dev, 
+ qtbase5-dev, 
+ qttools5-dev-tools
 Standards-Version: 3.9.8
-Homepage: https://www.deepin.org
+Homepage: https://www.gxde.org
 
-Package: deepin-graphics-driver-manager
+Package: gxde-graphics-driver-manager
 Architecture: any
 Depends: ${shlibs:Depends}, ${misc:Depends}, dialog, overlayroot, rsync, sed, qdbus-qt5
-Description: deepin driver manager
+Description: gxde driver manager

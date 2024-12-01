@@ -16,7 +16,7 @@ ResolutionsBuilder::ResolutionsBuilder(const GraphicsDeviceInfo &devInfo) :
 #ifdef QT_DEBUG
     m_config("resources/config/resolutions/resolutions.json"),
 #else
-    m_config("/usr/lib/deepin-graphics-driver-manager/resolutions.json"),
+    m_config("/usr/lib/gxde-graphics-driver-manager/resolutions.json"),
 #endif
     m_devInfo(devInfo)
 {

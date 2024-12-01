@@ -52,7 +52,7 @@ resolutions.json提供了一个由各种显卡类型组成的json列表，每一
 
 - 执行具体方案提供的prepare脚本，一般用来下载安装包
 - 复制具体方案的安装卸载脚本到`/usr/bin`目录下，以供重启时使用
-- 在`/usr/lib/deepin-graphics-driver-manager`目录生成config.conf，存储新旧方案名，驱动安装是否成功等数据
+- 在`/usr/lib/gxde-graphics-driver-manager`目录生成config.conf，存储新旧方案名，驱动安装是否成功等数据
 
 如果`dgradvrmgr-prepare.sh`脚本顺利执行完毕，就会提醒用户重启。在重启时启动lightdm之前会启动`driver-installer.service`服务，这个服务做一些额外的准备工作后就会将重启前复制到`/usr/bin`目录下的脚本**移动**到`/tmp`目录下，然后运行`dgradvrmgr.sh`脚本，开始在overlay上卸载旧驱动，安装新驱动，如果一切顺利会再启动`gltest`小茶壶测试程序，如果用户认为可以通过测试，那么就会去执行`dgradvrmgr-post.sh`脚本同步数据到硬盘，最后将成功的flag输入到上面提到的配置文件中并重启。
 

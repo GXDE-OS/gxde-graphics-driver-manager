@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="96px" height="96px" viewBox="0 0 96 96" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>deepin-graphics-driver-manager</title>
+    <title>gxde-graphics-driver-manager</title>
     <desc>Created with Sketch.</desc>
     <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-1">
@@ -40,7 +40,7 @@
         </filter>
     </defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="deepin-graphics-driver-manager">
+        <g id="gxde-graphics-driver-manager">
             <image id="Bitmap" x="2" y="6" width="80" height="82" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFAAAABSCAYAAADD2VOmAAAAAXNSR0IArs4c6QAAAzpJREFUeAHt3MtuGzEUA1Cn7y4K9P9/s4uiz/RSMdU7Q9kJu+sMBSjSUNcGdKCJd3q43G4Pi6VVtij776PHxQ5W2WUF0jPM+dzni+8/VAQsgvU5Nsl8bJg446H+8JlYGN9W/3gdX7Wamh6yAeh39R/Vv15HIhKP4wSrujkHGqDQP1V/X/3M7Vtt/kt1oKITb4yvK0DrJw9wyD9Xf1f97O1NAcDh+w5imHVAnjxkOHl4ddOeBHCoAInXetOwsD990M7J2zCNB7pszPCABkR0nL4P1dPWArCBEb3GDwVKEQATiziqaWsB2MBonkKeQJQTEPO02wIEHBUE5JGcsrc/f+oVvqn0mkeRAUFPrfTM5nnIhlkHI+Iznz/98sapA55e5l8A9oDQTbsvsDHaA97/aFZFIIBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9LykOoBC4gUB9Lykeg/IywWlMMEU2BjtAWdVJi8T6ICQRd/ci/KyrzlNFWzoNDYNQAYYcUdo2n0B3qM63HgCiYjFX9VxxVvaVgAmsOmA4/Y2lhHv5zUIImX+HijYEHGs9hPYAXHZKtZym+WTASxg0gHx1s77QDHvPx6Yo+MmX1y+yrXxoXo+euPh4R3auAKZHYh8jccJAwqAMGIBBR0MiITEF3OtpodsdMCrCjScvCVe5Y/9FeUHKx+NzwDFl/DuUAAeFRF75r4BiL1z/xj5/w81o3UIzjHipKEDjZ1Zr6vlwzSiEJC/CUAj3Hx1Kxv1xKACnzGydzhmrD/iCBh2gBGNGfY88DAhGOZsPetgfc7ao457rAlWG+7zJSBROuS9jGtHGjdI142tsssftvKB4hvUCKcAAAAASUVORK5CYII="></image>
             <g id="shape" transform="translate(5.375000, 7.875000)">
                 <g id="GPU">

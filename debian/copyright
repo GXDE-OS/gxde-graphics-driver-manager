@@ -1,5 +1,5 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: deepin-graphics-driver-manager
+Upstream-Name: gxde-graphics-driver-manager
 Source: <url://example.com>
 
 Files: *

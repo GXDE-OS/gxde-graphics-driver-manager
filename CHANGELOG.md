@@ -4,7 +4,7 @@
 
 #### Features
 
-*   allow avoid a solution display in solution list ([dc79289f](https://github.com/linuxdeepin/deepin-graphics-driver-manager/commit/dc79289fe87472c81ef0902b50f326b18b50b5b4))
+*   allow avoid a solution display in solution list ([dc79289f](https://github.com/linuxdeepin/gxde-graphics-driver-manager/commit/dc79289fe87472c81ef0902b50f326b18b50b5b4))
 
 
 

@@ -4,9 +4,9 @@ if (NOT DEFINED VERSION)
     set(VERSION 1.0.0)
 endif()
 
-project(deepin-graphics-driver-manager)
+project(gxde-graphics-driver-manager)
 
-set(BIN_NAME deepin-graphics-driver-manager)
+set(BIN_NAME gxde-graphics-driver-manager)
 # set(CMAKE_VERBOSE_MAKEFILE ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
@@ -74,15 +74,15 @@ endif ()
 install(TARGETS ${BIN_NAME} DESTINATION bin)
 
 # desktop
-install(FILES deepin-graphics-driver-manager.desktop DESTINATION share/applications)
+install(FILES gxde-graphics-driver-manager.desktop DESTINATION share/applications)
 
 # icons
 foreach (ICON_SIZE 64)
-    install(FILES resources/icons/deepin-graphics-driver-manager-${ICON_SIZE}px.svg
-            RENAME deepin-graphics-driver-manager.svg
+    install(FILES resources/icons/gxde-graphics-driver-manager-${ICON_SIZE}px.svg
+            RENAME gxde-graphics-driver-manager.svg
             DESTINATION share/icons/hicolor/${ICON_SIZE}x${ICON_SIZE}/apps)
 endforeach ()
-install(FILES resources/icons/deepin-graphics-driver-manager-64px.svg
+install(FILES resources/icons/gxde-graphics-driver-manager-64px.svg
         DESTINATION share/icons/hicolor/scalable/apps)
 
 # policy kit
@@ -91,7 +91,7 @@ install(FILES com.deepin.dgradvrmgr.policy
 
 # resolutions.json
 install(FILES resources/config/resolutions/resolutions.json
-        DESTINATION lib/deepin-graphics-driver-manager)
+        DESTINATION lib/gxde-graphics-driver-manager)
 
 # systemd servies
 install(FILES resources/service/driver-installer.service
@@ -99,10 +99,10 @@ install(FILES resources/service/driver-installer.service
 
 # scripts
 install(DIRECTORY scripts/
-        DESTINATION lib/deepin-graphics-driver-manager
+        DESTINATION lib/gxde-graphics-driver-manager
         FILE_PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE GROUP_READ GROUP_EXECUTE WORLD_READ WORLD_EXECUTE)
 
 # qm files
 file(GLOB QM_FILES "translations/*.qm")
 install(FILES ${QM_FILES}
-        DESTINATION share/deepin-graphics-driver-manager/translations)
+        DESTINATION share/gxde-graphics-driver-manager/translations)
