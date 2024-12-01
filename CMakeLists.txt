@@ -86,7 +86,7 @@ install(FILES resources/icons/gxde-graphics-driver-manager-64px.svg
         DESTINATION share/icons/hicolor/scalable/apps)
 
 # policy kit
-install(FILES com.deepin.dgradvrmgr.policy
+install(FILES com.gxde.dgradvrmgr.policy
         DESTINATION share/polkit-1/actions/)
 
 # resolutions.json
